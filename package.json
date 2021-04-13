@@ -1,0 +1,24 @@
+{
+  "name": "typescript-types-ftw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "ts-toolbelt": "^9.6.0",
+    "typescript": "^4.2.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisloarryn/typescript-ftw.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrisloarryn/typescript-ftw/issues"
+  },
+  "homepage": "https://github.com/chrisloarryn/typescript-ftw#readme"
+}
