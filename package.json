@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@type-challenges/utils": "^0.1.1",
     "ts-toolbelt": "^9.6.0",
     "typescript": "^4.2.4"
   },
