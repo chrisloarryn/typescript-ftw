@@ -1,10 +1,10 @@
 // asc order
 // In this challenge, you are required to sort natural number arrays in either ascend order or descent order.
 // Ascend order examples:
-type Iterator<n, iterator extends any[] = []> = 
+type IteratorSort<n, iterator extends any[] = []> = 
   iterator['length'] extends n 
     ? iterator
-    : Iterator<n, [any, ...iterator]>
+    : IteratorSort<n, [any, ...iterator]>
 
 type Drop1<xs extends any[]> =
   xs extends [any, ...infer tail] ? tail : []
@@ -30,14 +30,14 @@ type GreaterThan<a extends any[], b extends any[]> =
 
 type FilterLessThanOrEqual<value, xs extends any[], output extends any[] = []> = 
   xs extends [infer head, ...infer tail]
-    ? LessThanOrEqual<Iterator<value>, Iterator<head>> extends true
+    ? LessThanOrEqual<IteratorSort<value>, IteratorSort<head>> extends true
       ? [...output, head, ...FilterLessThanOrEqual<value, tail, output>]
       : [...output, ...FilterLessThanOrEqual<value, tail, output>]
     : []
 
 type FilterGreaterThan<value, xs extends any[], output extends any[] = []> = 
   xs extends [infer head, ...infer tail]
-    ? GreaterThan<Iterator<value>, Iterator<head>> extends true
+    ? GreaterThan<IteratorSort<value>, IteratorSort<head>> extends true
       ? [...output, head, ...FilterGreaterThan<value, tail, output>]
       : [...output, ...FilterGreaterThan<value, tail, output>]
     : []
