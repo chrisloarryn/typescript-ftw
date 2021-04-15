@@ -23,5 +23,5 @@ type Enum1 = Enum<["macOS", "Windows", "Linux"]>
 
 // If true is given in the second argument, the value should be a number literal.
 
-Enum<["macOS", "Windows", "Linux"], true>
+type enum2 = Enum<["macOS", "Windows", "Linux"], true>
 // -> { readonly MacOS: 0, readonly Windows: 1, readonly Linux: 2 }
